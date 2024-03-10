@@ -1,0 +1,48 @@
+{
+  "name": "bill_server",
+  "version": "1.0.0",
+  "description": "bill backend ",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "egg": "^3.17.5",
+    "egg-cors": "^3.0.0",
+    "egg-jwt": "^3.1.7",
+    "egg-mysql": "^4.0.0",
+    "egg-scripts": "2",
+    "mkdirp": "^3.0.1",
+    "moment": "^2.30.1"
+  },
+  "devDependencies": {
+    "egg-bin": "6",
+    "egg-mock": "5",
+    "eslint": "8",
+    "eslint-config-egg": "13",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-bill_server",
+    "stop": "egg-scripts stop --title=egg-server-bill_server",
+    "dev": "egg-bin dev",
+    "test": "npm run lint -- --fix && npm run test:local",
+    "test:local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "lintfix": "eslint --fix .",
+    "ci": "npm run lint && npm run cov",
+    "debug": "egg-bin debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "allen",
+  "license": "MIT"
+}
